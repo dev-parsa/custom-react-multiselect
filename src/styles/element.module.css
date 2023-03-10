@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+.element {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 4px;
+  border: 1px solid #6f6af8;
+  border-radius: 7px;
+  height: 2rem;
+}
+.element span {
+  font-size: 0.8rem;
+}

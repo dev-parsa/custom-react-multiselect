@@ -1,0 +1,40 @@
+.container {
+  background-color: #323741;
+  border-radius: 7px;
+  border: 1px solid #414650;
+  width: 22rem;
+  height: auto;
+  padding: 0.7rem 0.7rem;
+  position: relative;
+}
+.seperate {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.options-list {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  gap: 1rem;
+  position: absolute;
+  left: 0;
+  padding: 10px 0;
+  bottom: -300px;
+  background-color: #323741;
+  width: 100%;
+  border-radius: 7px;
+}
+.options-list li {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.options-list li:hover {
+  background-color: #414650;
+}
+.clicked {
+  text-decoration: line-through;
+  color: #696969;
+}

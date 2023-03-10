@@ -14,7 +14,6 @@
   align-items: center;
 }
 .options-list {
-  display: none;
   flex-direction: column;
   list-style: none;
   gap: 1rem;
@@ -30,6 +29,7 @@
   padding: 10px;
   cursor: pointer;
   transition: all 0.2s ease-in;
+  user-select: none;
 }
 .options-list li:hover {
   background-color: #414650;
@@ -37,4 +37,5 @@
 .clicked {
   text-decoration: line-through;
   color: #696969;
+  cursor: not-allowed !important;
 }

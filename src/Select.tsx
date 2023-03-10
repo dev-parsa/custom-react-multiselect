@@ -13,7 +13,7 @@ type SelectProps = {
 const Select = ({ options }: SelectProps) => {
   //states
   const [show, setShow] = useState(true);
-  const [click, setClick] = useState<number[]>([]);
+  const [click, setClick] = useState<string[]>([]);
   const [label, setLabel] = useState<string[]>([]);
 
   function addToLabel(name: string) {
@@ -21,11 +21,17 @@ const Select = ({ options }: SelectProps) => {
     if (didFind === true) return;
     else setLabel([...label, name]);
   }
-  console.log(label);
+  //JSX
   return (
     <div className={styles.container} onClick={() => setShow(!show)}>
       <div className={styles.seperate}>
-        <span>{label[0] != null && <Element elValue={label} />}</span>
+        <span>
+          {label[0] != null ? (
+            <Element elList={label} setClick={setClick} click={click} />
+          ) : (
+            "select..."
+          )}
+        </span>
         <div className={styles.indicators}>
           <div>
             <TfiAngleDown color="white" />
@@ -40,9 +46,9 @@ const Select = ({ options }: SelectProps) => {
           <li
             onClick={() => {
               addToLabel(option.name);
-              setClick([...click, option.id]);
+              setClick([...click, option.name]);
             }}
-            className={click.includes(option.id) ? styles.clicked : ""}
+            className={click.includes(option.name) ? styles.clicked : ""}
             key={option.id}
           >
             {option.name}

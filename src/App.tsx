@@ -1,11 +1,11 @@
 import Select from "./Select";
 import "./styles/app.css";
 const options = [
-  { name: "first", id: 1 },
-  { name: "second", id: 2 },
-  { name: "third", id: 3 },
-  { name: "fourth", id: 4 },
-  { name: "fifth", id: 5 },
+  { name: "React", id: 1 },
+  { name: "Vue", id: 2 },
+  { name: "Anuglar", id: 3 },
+  { name: "Solid", id: 4 },
+  { name: "Svelte", id: 5 },
 ];
 function App() {
   return (
